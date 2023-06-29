@@ -24,7 +24,7 @@ const Layout = ({ children }: Props) => {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/shop">Show</Link>
+            <Link to="/shop">Shop</Link>
           </li>
         </ul>
         <h5 className="w-18 flex-none font-light">in-cart( )</h5>

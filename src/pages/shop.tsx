@@ -47,7 +47,7 @@ const ShopPage: React.FC<PageProps> = () => {
       <nav className="w-full bg-green-500">
         <ul className="ml-4 py-2 flex flex-row gap-4">
           {filter === "all" ? (
-            <button className="font-bold underline">All</button>
+            <button className="font-bold underline">all</button>
           ) : (
             <button
               className="font-light"
@@ -56,7 +56,7 @@ const ShopPage: React.FC<PageProps> = () => {
             </button>
           )}
           {filter === "con" ? (
-            <button className="font-bold underline">Consonants</button>
+            <button className="font-bold underline">consonants</button>
           ) : (
             <button
               className="font-light"
@@ -65,7 +65,7 @@ const ShopPage: React.FC<PageProps> = () => {
             </button>
           )}
           {filter === "vow" ? (
-            <button className="font-bold underline">Vowels</button>
+            <button className="font-bold underline">vowels</button>
           ) : (
             <button
               className="font-light"
@@ -74,7 +74,7 @@ const ShopPage: React.FC<PageProps> = () => {
             </button>
           )}
           {filter === "oth" ? (
-            <button className="font-bold underline">Other</button>
+            <button className="font-bold underline">other</button>
           ) : (
             <button
               className="font-light"
