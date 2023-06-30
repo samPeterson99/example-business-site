@@ -5,7 +5,7 @@ import type { HeadFC, PageProps } from "gatsby";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className="flex flex-col min-h-screen">
-      <section className="bg-green-500 w-full h-full mb-12 relative flex-grow">
+      <section className="bg-green-500 w-full h-full mb-24 relative flex-grow">
         <div className="absolute w-1/2 h-1/4 bg-white left-12 top-1/3 flex flex-col p-4">
           <h2 className="text-lg font-semibold">The Stuff You Need</h2>
           <p className="mt-px">

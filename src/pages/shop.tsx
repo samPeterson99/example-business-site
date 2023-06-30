@@ -3,36 +3,35 @@ import { Link } from "gatsby";
 import ProductCard from "../components/ProductCard";
 import type { HeadFC, PageProps } from "gatsby";
 import { link } from "fs";
-
-interface Card {
-  title: String;
-  category: String;
-  price: number;
-}
+import { ProductType } from "../../types";
 
 const ShopPage: React.FC<PageProps> = () => {
   const [filter, setFilter] = React.useState("all");
 
-  let dummyCards: Card[] = [
+  let dummyCards: ProductType[] = [
     {
       title: "A",
       category: "vow",
       price: 5,
+      quantity: 1,
     },
     {
       title: "B",
       category: "con",
       price: 5,
+      quantity: 1,
     },
     {
       title: "C",
       category: "con",
       price: 3,
+      quantity: 1,
     },
     {
       title: "Y",
       category: "oth",
       price: 8,
+      quantity: 1,
     },
   ];
 

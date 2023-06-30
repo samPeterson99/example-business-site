@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ReactNode } from "react";
 import { Link } from "gatsby";
+import { CartContext } from "../CartContext";
 import "../styles/global.css";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   const [showFooterBar, setShowFooterBar] = React.useState(true);
+  const { cart } = React.useContext(CartContext);
 
   return (
     <div>
@@ -27,7 +29,9 @@ const Layout = ({ children }: Props) => {
             <Link to="/shop">Shop</Link>
           </li>
         </ul>
-        <h5 className="w-18 flex-none font-light">in-cart( )</h5>
+        <Link to="/cart">
+          <h5 className="w-18 flex-none font-light">in-cart({cart.length})</h5>
+        </Link>
       </nav>
       <main>{children}</main>
       {showFooterBar && (

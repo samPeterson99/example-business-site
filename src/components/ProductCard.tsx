@@ -2,16 +2,14 @@ import * as React from "react";
 import { ReactNode } from "react";
 import { Link } from "gatsby";
 import "../styles/global.css";
+import { ProductType } from "../../types";
+import { CartContext } from "../CartContext";
 
-type Card = {
-  product: {
-    title: String;
-    category: String;
-    price: number;
-  };
-};
+const ProductCard: React.FC<{ product: ProductType }> = ({ product }) => {
+  const { cart, addToCart } = React.useContext(CartContext);
 
-const ProductCard = ({ product }: Card) => {
+  console.log(cart);
+
   const { title, category, price } = product;
   console.log(product);
   return (
@@ -26,7 +24,9 @@ const ProductCard = ({ product }: Card) => {
       <p className="pl-4 font-extralight">
         This is where a product description goes.
       </p>
-      <button className="mt-px px-2 h-8 shadow-md hover:shadow-none hover:border-green-500 hover:border-2">
+      <button
+        onClick={() => addToCart(product)}
+        className="mt-px px-2 h-8 shadow-md hover:shadow-none hover:border-green-500 hover:border-2">
         Add to Cart
       </button>
     </div>
