@@ -3,40 +3,18 @@ import { Link } from "gatsby";
 import ProductCard from "../components/ProductCard";
 import type { HeadFC, PageProps } from "gatsby";
 import { link } from "fs";
+import { graphql } from "gatsby";
+import { useStaticQuery } from "gatsby";
 import { ProductType } from "../../types";
+//@ts-ignore
+import productsData from "../data/products";
 
 const ShopPage: React.FC<PageProps> = () => {
   const [filter, setFilter] = React.useState("all");
 
-  let dummyCards: ProductType[] = [
-    {
-      title: "A",
-      category: "vow",
-      price: 5,
-      quantity: 1,
-    },
-    {
-      title: "B",
-      category: "con",
-      price: 5,
-      quantity: 1,
-    },
-    {
-      title: "C",
-      category: "con",
-      price: 3,
-      quantity: 1,
-    },
-    {
-      title: "Y",
-      category: "oth",
-      price: 8,
-      quantity: 1,
-    },
-  ];
-
+  let products: ProductType[] = productsData.products;
   if (filter !== "all") {
-    dummyCards = dummyCards.filter((product) => {
+    products = products.filter((product) => {
       return product.category === filter;
     });
   }
@@ -83,8 +61,8 @@ const ShopPage: React.FC<PageProps> = () => {
           )}
         </ul>
       </nav>
-      <div className="mt-4 w-full grid grid-cols-2 gap-4 px-2">
-        {dummyCards.map((product, index) => {
+      <div className="mt-4 w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-2">
+        {products.map((product, index) => {
           return (
             <ProductCard
               key={index}

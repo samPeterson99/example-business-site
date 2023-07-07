@@ -1,0 +1,168 @@
+{
+  "products": [
+    {
+      "title": "A",
+      "category": "vow",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "B",
+      "category": "con",
+      "price": 3,
+      "quantity": 1
+    },
+    {
+      "title": "C",
+      "category": "con",
+      "price": 3,
+      "quantity": 1
+    },
+    {
+      "title": "D",
+      "category": "con",
+      "price": 2,
+      "quantity": 1
+    },
+    {
+      "title": "E",
+      "category": "vow",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "F",
+      "category": "con",
+      "price": 4,
+      "quantity": 1
+    },
+    {
+      "title": "G",
+      "category": "con",
+      "price": 2,
+      "quantity": 1
+    },
+    {
+      "title": "H",
+      "category": "con",
+      "price": 4,
+      "quantity": 1
+    },
+    {
+      "title": "I",
+      "category": "vow",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "J",
+      "category": "con",
+      "price": 8,
+      "quantity": 1
+    },
+    {
+      "title": "K",
+      "category": "con",
+      "price": 5,
+      "quantity": 1
+    },
+    {
+      "title": "L",
+      "category": "con",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "M",
+      "category": "con",
+      "price": 3,
+      "quantity": 1
+    },
+    {
+      "title": "N",
+      "category": "con",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "O",
+      "category": "vow",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "P",
+      "category": "con",
+      "price": 3,
+      "quantity": 1
+    },
+    {
+      "title": "Q",
+      "category": "con",
+      "price": 10,
+      "quantity": 1,
+      "sale": true,
+      "salePrice": 5
+    },
+    {
+      "title": "R",
+      "category": "con",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "S",
+      "category": "con",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "T",
+      "category": "con",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "U",
+      "category": "vow",
+      "price": 1,
+      "quantity": 1
+    },
+    {
+      "title": "V",
+      "category": "con",
+      "price": 4,
+      "quantity": 1
+    },
+    {
+      "title": "W",
+      "category": "con",
+      "price": 4,
+      "quantity": 1
+    },
+    {
+      "title": "X",
+      "category": "con",
+      "price": 8,
+      "quantity": 1,
+      "sale": true,
+      "salePrice": 4
+    },
+    {
+      "title": "Y",
+      "category": "oth",
+      "price": 4,
+      "quantity": 1,
+      "sale": true,
+      "salePrice": 2
+    },
+    {
+      "title": "Z",
+      "category": "con",
+      "price": 10,
+      "quantity": 1,
+      "sale": true,
+      "salePrice": 3
+    }
+  ]
+}

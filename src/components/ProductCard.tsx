@@ -10,7 +10,7 @@ const ProductCard: React.FC<{ product: ProductType }> = ({ product }) => {
 
   console.log(cart);
 
-  const { title, category, price } = product;
+  const { title, category, price, sale, salePrice } = product;
   console.log(product);
   return (
     <div className="w-full flex flex-col">
@@ -19,7 +19,14 @@ const ProductCard: React.FC<{ product: ProductType }> = ({ product }) => {
       </div>
       <div className="px-2 flex flex-row justify-between">
         <p>The Letter {title}</p>
-        <p>${price}</p>
+        {sale ? (
+          <div className="flex flex-row">
+            <p>${salePrice}</p>
+            <p className="ml-2 line-through">${price}</p>
+          </div>
+        ) : (
+          <p>${price}</p>
+        )}
       </div>
       <p className="pl-4 font-extralight">
         This is where a product description goes.

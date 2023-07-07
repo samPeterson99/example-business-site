@@ -1,6 +1,6 @@
 interface ProductType {
-  title: String;
-  category: String;
+  title: string;
+  category: string;
   price: number;
   quantity: number;
   sale?: boolean;

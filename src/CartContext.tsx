@@ -56,7 +56,13 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       if (existingItem) {
         const updatedCart = prevCart.map((cartItem) =>
           cartItem.title === item.title
-            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            ? {
+                ...cartItem,
+                quantity:
+                  cartItem.quantity + item.quantity >= 99
+                    ? 99 //cart quantity cannot go above 99
+                    : cartItem.quantity + item.quantity,
+              }
             : cartItem
         );
         return updatedCart;
@@ -67,11 +73,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const updateQuantity = (itemTitle: string, newQuantity: number) => {
-    setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.title === itemTitle ? { ...item, newQuantity } : item
-      )
-    );
+    console.log(newQuantity);
+    if (newQuantity < 100 && newQuantity > 0) {
+      setCart((prevCart) =>
+        prevCart.map((item) =>
+          item.title === itemTitle ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    }
   };
 
   const removeFromCart = (itemTitle: string) => {

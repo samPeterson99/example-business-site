@@ -12,6 +12,8 @@ const Layout = ({ children }: Props) => {
   const [showFooterBar, setShowFooterBar] = React.useState(true);
   const { cart } = React.useContext(CartContext);
 
+  const cartNumber = cart.reduce((acc, obj) => acc + obj.quantity, 0);
+
   return (
     <div>
       <nav className="sticky h-10 self-start px-4 flex flex-row items-center justify-between top-0 bg-white z-50">
@@ -30,11 +32,11 @@ const Layout = ({ children }: Props) => {
           </li>
         </ul>
         <Link to="/cart">
-          <h5 className="w-18 flex-none font-light">in-cart({cart.length})</h5>
+          <h5 className="w-18 flex-none font-light">in-cart({cartNumber})</h5>
         </Link>
       </nav>
       <main>{children}</main>
-      {showFooterBar && (
+      {/* {showFooterBar && (
         <div className="sticky self-start px-4 h-20 flex flex-row items-center bottom-0 bg-white z-50">
           <div className="w-full flex flex-row items-center">
             <h5 className="text-lg font-bold mr-2 ">Special Offer: </h5>
@@ -53,7 +55,7 @@ const Layout = ({ children }: Props) => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
